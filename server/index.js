@@ -26,6 +26,11 @@ app.use('/api/dashboard', dashboardRouter)
 
 
 
+// Base Route
+app.get("/", (req, res) => {
+    res.json({ message: "Hello from Employee Management System API" })
+})
+
 
 app.listen(process.env.PORT, ()=>{
     console.log(`Server is Running on port ${process.env.PORT}`)
